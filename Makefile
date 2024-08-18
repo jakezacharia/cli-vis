@@ -7,12 +7,12 @@
 CXX = g++
 
 # define any compile-time flags
-CXXFLAGS	:= -std=c++17 -Wall -Wextra -g
+CXXFLAGS := -std=c++17 -Wall -Wextra -g -I/usr/local/include
 
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I'd specify
 #   their path using -Lpath, something like:
-LDFLAGS = -framework CoreAudio -framework AudioUnit
+LDFLAGS = -framework CoreAudio -framework AudioUnit -L/usr/local/lib -lfftw3
 # target is the name of the program file output 
 TARGET = cli-vis
 
